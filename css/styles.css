@@ -2,23 +2,40 @@
 
 html { font-size: 62.5%; }
 
-.container { width: 50vw; margin: 0 auto; }
+.container { width: 70vw; margin: 0 auto; }
+@media screen and (max-width: 786px) { .container { max-width: 90vw; overflow: hidden; } }
 
 img { max-width: 100%; height: auto; }
 
+.header { margin-bottom: 5rem; }
 .header__image { width: 100%; display: flex; justify-content: center; margin-top: 5rem; }
 .header .logo { display: block; }
 .header__title { display: flex; justify-content: center; margin-top: 5rem; font-size: 4rem; font-weight: bolder; color: #686868; }
-@media screen and (max-width: 786px) { .header__title { font-size: 3rem; } }
+@media screen and (max-width: 786px) { .header__title { font-size: 2rem; } }
 
 .main { width: 100%; margin: 5rem 0; }
 
 .form-group { display: flex; width: 80%; margin: 0 auto; justify-content: center; }
-@media screen and (max-width: 786px) { .form-group { flex-direction: column; } }
-.form-control { flex: 1; padding: 2rem; outline: none; }
+@media screen and (max-width: 786px) { .form-group { flex-direction: column; width: 100%; } }
+.form-control { flex: 1; padding: 2rem; outline: none; font-size: 2rem; }
+@media screen and (max-width: 786px) { .form-control { padding: 1.8rem; font-size: 2rem; } }
 
-input[type="submit"] { padding: 0.5rem 1rem; background: #ccc; font-size: 1.8rem; border: none; transition: all 800ms; }
-@media screen and (max-width: 786px) { input[type="submit"] { margin-top: 2rem; } }
+input[type="submit"] { padding: 0.5rem 1rem; background: #ccc; font-size: 1.8rem; border: none; transition: background 800ms; }
+@media screen and (max-width: 786px) { input[type="submit"] { margin-top: 2rem; border-radius: 0.3rem; transition: none; -webkit-appearance: none; appearance: none; border-radius: 0; padding: 2rem; } }
 input[type="submit"]:hover { outline: none; background: #aaa; cursor: pointer; }
+
+.header__title { text-transform: uppercase; }
+
+.feedback_section { width: 70%; margin: 0 auto; }
+@media screen and (max-width: 786px) { .feedback_section { width: 100%; } }
+
+.feedback { Display: none; place-items: center; background: pink; padding: 1rem; font-size: 1.8rem; border-radius: 6px; text-transform: capitalize; }
+
+.showItems { display: grid; }
+
+.results { display: grid; grid-template-columns: 2fr 1fr 1fr; }
+@media screen and (max-width: 786px) { .results { grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 786px) { .avatar { order: 4; } }
 
 /*# sourceMappingURL=styles.css.map */
